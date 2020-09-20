@@ -26,6 +26,7 @@ const me = {
 - 📦 6 modules
 - 📝 2 tests
 - ✔️ ❌ Grades (Notes)
+  - TP included!!!
 - 💻 homework (devoir)
 
 
