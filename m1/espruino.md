@@ -6,9 +6,11 @@ title: Espruino Weather Station
 
 [Espruino](https://www.espruino.com/) is a project that combines small, powerful, and efficient microcontrollers with a JavaScript runtime.
 
-For this course, we will use an [Espruino Wifi](https://www.espruino.com/WiFi), a [BME280 Environment Sensor](https://www.espruino.com/BME280) (temperature, humidity, and atmospheric pressure), and a [SSD1306 OLED](https://www.espruino.com/SSD1306) display.
+For this course, we will use an [Espruino Wifi](https://www.espruino.com/WiFi), a [BME280 Environment Sensor](https://www.espruino.com/BME280) (temperature, humidity, and atmospheric pressure), and a [SSD1306 OLED](https://www.espruino.com/SSD1306) display. We will combine all of these components to create a weather station running JavaScript!
 
 ![weather station](./images/espruino.gif)
+
+The weather station records the temperature, humidity, and atmospheric pressure. The data can then be used to monitor and predict the weather.
 
 The components are combined as illustrated below:
 ![board](./images/board.svg)
@@ -50,25 +52,77 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 
 1. clear() and flip()
 
-  The Espruino [Graphics](https://www.espruino.com/Graphics) library lets us use "double buffering" to write to the display. First, we draw to a local variable (buffer) then we call the `flip()` function to write the buffer to the display. The function `clear()` clears the buffer.
+   The Espruino [Graphics](https://www.espruino.com/Graphics) library lets us use "double buffering" to write to the display. First, we draw to a local variable (buffer) then we call the `flip()` function to write the buffer to the display. The function `clear()` clears the buffer.
 
 1. refresh with setInterval()
-   
-   * [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
+   The function [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) allows executing a function at regular intervals. For example:
+
+   ```javascript
+   let count = 0;
+   setInterval(() => {
+     console.log('The count is:', count);
+     count = count + 1;
+   })
+   ```
+### Reference
+
+* [Espruino Graphics](https://www.espruino.com/Graphics) (includes fonts, text, shapes, and images)
+* [Espruino SSD1306 OLED Driver](https://www.espruino.com/SSD1306)
+* [Espruino `setInterval()`](https://www.espruino.com/Reference#l__global_setInterval)
 
 ## 3 BME280 Environment Sensor
 
-1. setup
+1. Setup the environment sensor by adding the following code to your project:
+    ```javascript
+    let sensor;
+    function setupSensor() {
+      A4.reset();
+      A5.set();
 
-1. get data and display
+      console.log('Starting Temp');
+      const i2c = new I2C();
+      i2c.setup({scl: A1, sda: A0});
+      sensor = require('BME280').connect(i2c);
+    }
 
-#### Exercise 3.1: use setInterval to read the temperature and update the display
+    const data = sensor.getData();
+    console.log('Temp:', data.temp);
+    console.log('Humidity:', data.humidity);
+    console.log('Pressure:', data.pressure);
+    ```
+
+#### Exercise 3.1 Instead of displaying the data on the console, we should display it on the OLED dislplay! Use the `drawString()` functions to read the data from the sensor and display it on the OLED display.
+
+#### Exercise 3.2: use setInterval to read the temperature and update the display
+
+### Reference
+
+* [Espruino BME280 Driver](https://www.espruino.com/BME280)
 
 #### Bonus: Graph library to draw cool graphs!!!
 
+### Reference
+
+* [Espruino Graph Library](https://www.espruino.com/graph) (for drawing graphs)
+
 ## 4 Wifi
 
+1. The following code allows connecting to a wifi access point:
+
+TODO:
+- Bring router and plug-in with cable?
+- Share iphone connection?
+
+### Reference
+
+* [Espruino WiFi Reference](https://www.espruino.com/WiFi#using-wifi)
+
 ## 5 Server
+
+### Reference
+
+* [Espruino Web Server](https://www.espruino.com/Internet#server)
+* [Espruino Handling POST'ed forms](https://www.espruino.com/Posting+Forms)
 
 ## Weather History
