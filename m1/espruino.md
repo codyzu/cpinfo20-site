@@ -8,6 +8,8 @@ title: Espruino Weather Station
 
 For this course, we will use an [Espruino Wifi](https://www.espruino.com/WiFi), a [BME280 Environment Sensor](https://www.espruino.com/BME280) (temperature, humidity, and atmospheric pressure), and a [SSD1306 OLED](https://www.espruino.com/SSD1306) display.
 
+![weather station](./images/espruino.gif)
+
 The components are combined as illustrated below:
 ![board](./images/board.svg)
 
