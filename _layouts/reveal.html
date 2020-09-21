@@ -22,7 +22,7 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-markdown="{{ page.name | split: " ." | first }}-slides.md" data-separator-vertical="^\r?\n\r?\n">
+			<section data-markdown="{{ page.name | replace: ".html", "-slides.md" }}" data-separator-vertical="^\r?\n\r?\n">
 			</section>
 		</div>
 	</div>
