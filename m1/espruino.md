@@ -10,7 +10,9 @@ For this course, we will use an [Espruino Wifi](https://www.espruino.com/WiFi), 
 
 The components are combined as illustrated below:
 ![board](./images/board.svg)
-**CPINFO Espruino Circuit Diagram**
+
+<p align="center"><strong>CPINFO Espruino Circuit Diagram</strong></p>
+
 
 ## 1 Get Connected
 
@@ -25,7 +27,7 @@ The components are combined as illustrated below:
 
 ## 2 OLED Display
 
-The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates with the Espruino using a SPI protocol. Fortuneatly, this is already supported by Espruino.
+The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates with the Espruino using a SPI protocol. Fortunately, this is already supported by Espruino.
 
 1. Setup the display by adding the following code to your project:
     ```javascript
@@ -46,7 +48,11 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 
 1. clear() and flip()
 
+  The Espruino [Graphics](https://www.espruino.com/Graphics) library lets us use "double buffering" to write to the display. First, we draw to a local variable (buffer) then we call the `flip()` function to write the buffer to the display. The function `clear()` clears the buffer.
+
 1. refresh with setInterval()
+   
+   * [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 
 ## 3 BME280 Environment Sensor
