@@ -62,6 +62,8 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 
    The Espruino [Graphics](https://www.espruino.com/Graphics) library lets us use "double buffering" to write to the display. First, we draw to a local variable (buffer) then we call the `flip()` function to write the buffer to the display. The function `clear()` clears the buffer.
 
+   Double buffering techniques reduce flickering when drawing animations on a display.
+
 1. Refresh with `setInterval()`
 
    The function [setInterval()](https://www.espruino.com/Reference#l__global_setInterval) allows executing a function at regular intervals. For example the following code will log a message every second (1000ms):
@@ -73,6 +75,8 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
      count = count + 1;
    }, 1000)
    ```
+#### ☑️ Exercise 2.1 Use `setInterval()` to update the display with some changing text or shapes.
+
 ### 📖 Reference
 
 * [Espruino Graphics Tutorial](https://www.espruino.com/Graphics)
