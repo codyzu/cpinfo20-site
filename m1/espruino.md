@@ -56,15 +56,15 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
     setupDisplay();
     ```
 
-   The graphics library on Espruino allows changing the font, drawing lines, shapes, and much more. **See details**
+   The graphics library on Espruino allows changing the [font](https://www.espruino.com/Graphics#text-fonts), [drawing lines](https://www.espruino.com/Graphics#random-lines), [shapes](https://www.espruino.com/Graphics#circles), and [much more](https://www.espruino.com/Reference#Graphics).
 
-1. clear() and flip()
+1. `clear()` and `flip()`
 
    The Espruino [Graphics](https://www.espruino.com/Graphics) library lets us use "double buffering" to write to the display. First, we draw to a local variable (buffer) then we call the `flip()` function to write the buffer to the display. The function `clear()` clears the buffer.
 
-1. refresh with setInterval()
+1. Refresh with `setInterval()`
 
-   The function [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) allows executing a function at regular intervals. For example the following code will log a message every second (1000ms):
+   The function [setInterval()](https://www.espruino.com/Reference#l__global_setInterval) allows executing a function at regular intervals. For example the following code will log a message every second (1000ms):
 
    ```javascript
    let count = 0;
@@ -75,9 +75,11 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
    ```
 ### 📖 Reference
 
-* [Espruino Graphics](https://www.espruino.com/Graphics) (includes fonts, text, shapes, and images)
+* [Espruino Graphics Tutorial](https://www.espruino.com/Graphics)
+* [Espruino Graphics Reference](https://www.espruino.com/Reference#Graphics)
 * [Espruino SSD1306 OLED Driver](https://www.espruino.com/SSD1306)
 * [Espruino `setInterval()`](https://www.espruino.com/Reference#l__global_setInterval)
+* [JavaScript `setInterval()` Reference](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 ## 3 BME280 Environment Sensor
 
