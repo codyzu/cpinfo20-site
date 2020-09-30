@@ -12,7 +12,7 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ### 📺 [Presentation - Introduction](m1/intro.html)
 
-### 📺 [Presentation - Details](m1/details.html)
+<!-- ### 📺 [Presentation - Details](m1/details.html) -->
 
 ### 👩‍🔧 [Exercise 1.0: Espruino Weather Station](m1/espruino.html)
 
