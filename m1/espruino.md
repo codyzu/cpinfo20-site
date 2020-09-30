@@ -40,22 +40,22 @@ The components are combined as illustrated below:
 The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates with the Espruino using a SPI protocol. Fortunately, this is already supported by Espruino.
 
 1. Setup the display by adding the following code to your project:
-    ```javascript
-    let display;
-    function setupDisplay() {
-      I2C1.setup({scl: B8, sda: B9});
-      B7.set();
-      B6.reset();
-      display = require('SSD1306').connect(I2C1, displayReady);
-    }
+   ```javascript
+   let display;
+   function setupDisplay() {
+     I2C1.setup({scl: B8, sda: B9});
+     B7.set();
+     B6.reset();
+     display = require('SSD1306').connect(I2C1, displayReady);
+   }
 
-    function displayReady() {
-      display.drawString("Hello CPINFO");
-      display.flip();
-    }
+   function displayReady() {
+     display.drawString("Hello CPINFO");
+     display.flip();
+   }
 
-    setupDisplay();
-    ```
+   setupDisplay();
+   ```
 
    The graphics library on Espruino allows changing the [font](https://www.espruino.com/Graphics#text-fonts), [drawing lines](https://www.espruino.com/Graphics#random-lines), [shapes](https://www.espruino.com/Graphics#circles), and [much more](https://www.espruino.com/Reference#Graphics).
 
@@ -74,7 +74,7 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
    setInterval(() => {
      console.log('The count is:', count);
      count = count + 1;
-   }, 1000)
+   }, 1000);
    ```
 #### ☑️ Exercise 2.1 Use `setInterval()` to update the display with some changing text or shapes.
 
@@ -89,25 +89,25 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 ## 3 BME280 Environment Sensor
 
 1. Setup the environment sensor by adding the following code to your project:
-    ```javascript
-    let sensor;
-    function setupSensor() {
-      A4.reset();
-      A5.set();
+   ```javascript
+   let sensor;
+   function setupSensor() {
+     A4.reset();
+     A5.set();
 
-      console.log('Starting Temp');
-      const i2c = new I2C();
-      i2c.setup({scl: A1, sda: A0});
-      sensor = require('BME280').connect(i2c);
-    }
+     console.log('Starting Temp');
+     const i2c = new I2C();
+     i2c.setup({scl: A1, sda: A0});
+     sensor = require('BME280').connect(i2c);
+   }
 
-    setupSensor();
+   setupSensor();
 
-    const data = sensor.getData();
-    console.log('Temp:', data.temp);
-    console.log('Humidity:', data.humidity);
-    console.log('Pressure:', data.pressure);
-    ```
+   const data = sensor.getData();
+   console.log('Temp:', data.temp);
+   console.log('Humidity:', data.humidity);
+   console.log('Pressure:', data.pressure);
+   ```
 
 #### ☑️ Exercise 3.1 Instead of displaying the data on the console, we should display it on the OLED dislplay! Use the `drawString()` functions to read the data from the sensor and display it on the OLED display.
 
@@ -124,33 +124,33 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 
 1. The following code allows connecting to a wifi access point:
 
-    ```javascript
-    const WIFI_NAME = "ChateauxLefevre";
-    const WIFI_OPTIONS = { password : "yosemite" };
+   ```javascript
+   const WIFI_NAME = "SSID";
+   const WIFI_OPTIONS = { password : "PASSWORD" };
 
-    let wifi;
-    function connectWifi() {
-      wifi = require("Wifi");
-      wifi.connect(WIFI_NAME, WIFI_OPTIONS, function(err) {
-        if (err) {
-          console.log("Connection error: "+err);
-          return;
-        }
+   let wifi;
+   function connectWifi() {
+     wifi = require("Wifi");
+     wifi.connect(WIFI_NAME, WIFI_OPTIONS, function(err) {
+       if (err) {
+         console.log("Connection error: "+err);
+         return;
+       }
 
-        wifi.getIP((err, addr) => {
+       wifi.getIP((err, addr) => {
 
-          if (err) {
-            console.log("IP error: "+err);
-            return;
-          }
+         if (err) {
+           console.log("IP error: "+err);
+           return;
+         }
 
-          console.log("Connected!", addr.ip);
-        });
-      });
-    }
+         console.log("Connected!", addr.ip);
+       });
+     });
+   }
 
-    connectWifi();
-    ```
+   connectWifi();
+   ```
 
 ### 📖 Reference
 
@@ -160,24 +160,24 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 
 1. Once we are connected to wifi, we can serve a page over http. Add the following line just after `console.log("Connected!", addr.ip);` from the previous section:
 
-    ```javascript
-    require("http").createServer(pageRequest).listen(80); // port 80
-    ```
+   ```javascript
+   require("http").createServer(pageRequest).listen(80); // port 80
+   ```
 
-1. Now write the add the request handler to return an html page:
+1. Now add the request handler to return an html page:
 
-    ```javascript
-    function pageRequest(req, res) {
-      res.writeHead(200, {'Content-Type': 'text/html'});
-      res.end(`
-    <html>
-      <body>
-        <h1>Hello CPINFO</h1>
-        The current time is ${new Date().toString()}
-      </body>
-    </html>`);
-    }
-    ```
+   ```javascript
+   function pageRequest(req, res) {
+     res.writeHead(200, {'Content-Type': 'text/html'});
+     res.end(`
+   <html>
+     <body>
+       <h1>Hello CPINFO</h1>
+       The current time is ${new Date().toString()}
+     </body>
+   </html>`);
+   }
+   ```
 
    Notice that the inside the ` quotes, you can execute JavaScript to create dynamic strings. These are called template strings.
 
