@@ -2,11 +2,11 @@
 title: Espruino Weather Station
 ---
 
-{%
+<!--
 TODO:
 - Bring router and plug-in with cable?
 - Share iphone connection?
-%}
+-->
 
 # Espruino Weather Station
 
