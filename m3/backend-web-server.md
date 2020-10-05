@@ -6,12 +6,7 @@ redirect_from: /m3
 
 <!-- There is a working version of this exercise [here](https://cpinfo-m2-express-pug.firebaseapp.com/). -->
 
-TODO:
-1. Add follow up for espruino
-1. ~~Test source (npm + node-fetch + openweather)~~
-2. ~~work through here api with new screenshots~~
-3. add screenshots + notes for day 1 exercise
-4. ~~add "details" presentation~~
+<!-- TODO: add screenshots + notes for day 1 exercise -->
 
 ## 1 Express hello world
 
