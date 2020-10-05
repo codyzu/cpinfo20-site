@@ -170,13 +170,12 @@ To call the api https://jsonplaceholder.typicode.com/albums?userId=2 with node-f
 ```javascript
 app.get('/testasync', async (req, res) => {
   try {
-    const params = new URLSearchParams();
-    params.append('userId', 2);
+    const params = new URLSearchParams({userId: 2});
+    const result = await fetch(`https://jsonplaceholder.typicode.com/albums?${params}`);
+    const albums = await result.json();
 
-    const result = await fetch('https://jsonplaceholder.typicode.com/albums?userId=2');
-
-    console.log('STATUS CODE:', result.status, 'DATA:', result.json());
-    res.send(`There are ${result.json().length} albums in the result.`);
+    console.log('STATUS CODE:', result.status, 'DATA:', albums);
+    res.send(`There are ${albums.length} albums in the result.`);
   } catch (error) {
     console.error('An error occurred:', error.stack);
     res.status(500).send('Error!');
