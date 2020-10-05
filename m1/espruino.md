@@ -175,9 +175,9 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 
    Notice that the inside the ` quotes, you can execute JavaScript to create dynamic strings. These are called template strings.
 
-#### ☑️ Exercise 5.1 Customize the page to return the current temperature, humidity, pressure.
+#### ☑️ Exercise 5.1: Customize the page to return the current temperature, humidity, pressure.
 
-#### ☑️ Exercise 5.2 Imagine saving a history of the weather data... modify the program to record a log of data and return the data in the response. Consider adding a JavaScript graphing library such as ??? into the HTML page.
+#### ☑️ Exercise 5.2: Imagine saving a history of the weather data... modify the program to record a log of data and return the data in the response. Consider adding a JavaScript graphing library such as ??? into the HTML page.
 
 ### 📖 Reference
 
@@ -186,3 +186,30 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 * [Espruino HttpSrv](https://www.espruino.com/Reference#httpSrv)
 * [Espruino HttpSRq](https://www.espruino.com/Reference#httpSRq)
 * [Espruino HttpSRs](https://www.espruino.com/Reference#httpSRs)
+
+## 6 API
+
+We can also serve multiple pages (routes) by parsing the URL sent to the Espruino.
+
+1. Inside the `pageRequest()` function add a route to get the live weather data:
+   ```javascript
+   function pageRequest(request, res) {
+     const a = url.parse(request.url, true);
+
+     if (a.pathname === '/') {
+       res.writeHead(200, {'Content-Type': 'text/html'});
+       res.end(`
+       <html>
+        <!-- ... -->
+       </html>`);
+     } else if (a.pathname === '/data') {
+       // ...
+     }
+   }
+   ```
+
+#### ☑️ Exercise 6.1: Complete the `/data` route to return the live weather data from your Espruino weather station.
+* You will need to use the content type `application/data` to send JSON data.
+* Be sure to call `JSON.stringify()` on your data to convert it to JSON.
+
+#### ☑️ Bonus: Add another route `/history` to get the historic data.

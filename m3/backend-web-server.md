@@ -8,7 +8,7 @@ redirect_from: /m3
 
 TODO:
 1. Add follow up for espruino
-1. Test source (npm + node-fetch + openweather)
+1. ~~Test source (npm + node-fetch + openweather)~~
 2. ~~work through here api with new screenshots~~
 3. add screenshots + notes for day 1 exercise
 4. ~~add "details" presentation~~
