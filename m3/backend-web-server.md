@@ -199,7 +199,7 @@ app.get('/testasync', async (req, res) => {
   ```pug
   html
     body
-      p The time is #{new Date(time * 1000).toLocalseString()}
+      p The time is #{new Date(time * 1000).toLocaleString()}
   ```
   💡Alternatively, you can use [moment.js](https://momentjs.com/) to parse and format date and times.
 * 🚀 **BONUS**: Consider adding some fancy icons like [feather icons](https://feathericons.com/). Here is an example pug template with an icon:
