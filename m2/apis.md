@@ -14,7 +14,7 @@ When building a web application, you will most certainly need to call some APIs.
 
 **💡Tip: You can either test the APIs with Chrome or wth [Postman](https://www.getpostman.com/) (download from the instructor).**
 
-## 1 Darksky weather ⛈ API
+## 1 OpenWeather ⛈ API
 
 [OpenWeather](https://openweathermap.org/) is service providing APIs providing weather forecasts.
 
