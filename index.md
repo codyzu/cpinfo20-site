@@ -24,6 +24,8 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ### 👩‍🔧 [Exercise 2.0: APIs](m2/apis.html)
 
+---
+
 ## Module 3: Web Server
 
 ### 👩‍🔧 [Exercise 3.0: Backend Web Service](m3/backend-web-server.html)
@@ -31,8 +33,6 @@ Here you will find resources for the CPINFO-20 web dev course.
 ---
 
 ## Module 4: NoSQL
-
-### 📝 [SQL vs NoSQL](m4/nosql-vs-sql)
 
 ### 👩‍🔧 [NoSQL Queries](m4/nosql-queries)
 
@@ -45,14 +45,14 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ### ✔️ Review
 
-- ### [Module 1 Introduction + Module 3 NoSQL vs SQL](m1/group-activity)
+- ### [Module 1: Introduction, JavaScript, Node.js, npm](m1/group-activity)
   - Java vs JavaScript
   - node.js
   - JavaScript types
   - npm
   - NoSQL vs SQL
-- ### [Express](m3/backend-web-server)
+- ### [Module 3: Express](m3/backend-web-server)
   - Add a route with a URL parameter
-DELETE: - ### [NoSQL](m4/nosql-vs-sql)
+- ### [Module 4: NoSQL](m1/group-activity#5-sql-vs-nosql-)
   - Advantages / Disadvantages
 -->
