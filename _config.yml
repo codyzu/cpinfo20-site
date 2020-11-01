@@ -1,3 +1,5 @@
 title: CPINFO20 Web Development
 github:
   private: true
+plugins:
+  - jekyll-redirect-from
