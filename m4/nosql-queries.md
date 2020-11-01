@@ -125,7 +125,7 @@ Setup a *new* project to do queries (do not add this to our express.js project):
    npm install --save firebase
    ```
 1. Open your project directory in vscode
-1. Add the following file to your project, named `countries.js`:
+1. Create a new file in your project named `countries.js` with the following:
 
 ```javascript
 'use strict';
@@ -143,16 +143,16 @@ firebase.initializeApp({
 const firestore = firebase.firestore();
 
 async function queryCountries() {
- try {
-   // YOUR CODE HERE
+  try {
+    // YOUR CODE HERE
 
 
- } catch(error) {
-   console.log(error);
- } finally {
-   // Delete the application to close the connections to the DB
-   await firebase.app().delete();
- }
+  } catch(error) {
+    console.log(error);
+  } finally {
+    // Delete the application to close the connections to the DB
+    await firebase.app().delete();
+  }
 }
 
 queryCountries();
@@ -182,7 +182,7 @@ Execute your countries.js script to see the results.
 node .\countries.js
 ```
 
-Of course, we could have *replaced* the above code with a single line:
+We could have *replaced* the above code with a single line. **This is equivalent to the previous code snippet:**
 
 ```javascript
 const franceSnapshot2 = await firestore
@@ -234,6 +234,8 @@ There are several operators we can use in a where clause:
 - `'array-contains'`
 
 The `'array-contains'` operator checks if an array contains a value.
+
+See the [Firestore documentation](https://firebase.google.com/docs/firestore/query-data/queries#query_operators) for a list of all supported operators.
 
 The following query lists the names of all of the countries that are larger than 9000000 m2:
 
@@ -366,7 +368,7 @@ Users can:
 * Pass the query results when rendering the page template with pug.
 * In the pug template, render the ordered list.
 
-# 5 Problems
+# 5 NoSQL vs SQL
 
 A NoSQL database typically has the following **advantages**:
 * very fast for large quantities of documents
