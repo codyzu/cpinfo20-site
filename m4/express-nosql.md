@@ -3,19 +3,30 @@ title: Adding Cloud Firestore to Express
 ---
 # Firebase Cloud Firestore
 
+⚠️ **Register your Free GCP Coupon from the instructor!**
+
+⚠️ ⚠️ You must use your IUT Google account for you coupon to work ⚠️ ⚠️
+
+https://www.iut-acy.univ-smb.fr/ 👉 Intranet 👉 Ressources Informatiques 👉 Offres Logiciel 👉 Plateforme Google
+
 ## 1 Adding admin access to Firestore to exprss
 
 1. [https://console.firebase.google.com](https://console.firebase.google.com)
 
-1. Sign in to your google account
+1. Sign in to your **IUT** google account
 
 1. "Add project"
 
-1. Give your project a unique name, i.e. "weather" and _disable_ Google Analytics.
+1. Give your project a unique name, i.e. "weather".
+
+1. Disable Google Analytics (we won't be using them).
+   ![disable google analytics](images/firebase-disable-google-analytics.png)
+
+1. Click "Create project".
 
 1. In the firebase web console, navigate to Database and click "Create Database"
 
-   ![create database](images/create-database-annotated.jpg)
+   ![create database](images/firebase-firestore.png)
 
 1. Choose "Start in test mode". _⚠ Note the security warning: **your database is open for anyone to read/write!**_ Click "Create project".
 
@@ -24,7 +35,7 @@ title: Adding Cloud Firestore to Express
 1. Use the default `nam5 (us-central)` location and click "Done":
    ![firestore location](images/firestore-location.jpg)
 
-1. Click on "Add collection"
+1. Click on "Start collection"
 
 1. Give the collection the name `cities` and click "Next".
 
