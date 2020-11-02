@@ -16,7 +16,7 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ### 👩‍🔧 [Exercise 1.0: Espruino Weather Station](m1/espruino.html)
 
-<!-- ### 👪 [Group Activity Results](m1/group-activity) -->
+### 👪 [Group Activity Results](m1/group-activity)
 
 ---
 
@@ -40,7 +40,6 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ---
 
-<!--
 ## Exam 1 📝
 
 ### ✔️ Review
@@ -55,4 +54,4 @@ Here you will find resources for the CPINFO-20 web dev course.
   - Add a route with a URL parameter
 - ### [Module 4: NoSQL](m1/group-activity#5-sql-vs-nosql-)
   - Advantages / Disadvantages
--->
+
