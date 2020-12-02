@@ -5,7 +5,7 @@ redirect_from: /m5
 
 # Module 5 - React weather interface
 
-⛈👀 See it live at [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life)
+⛈👀 See it live at [weather.codyfactory.eu](https://weather.codyfactory.eu)
 
 ## 1 What is React
 
@@ -423,7 +423,7 @@ Managing state is a complicated task. Large projects often store the majority of
 
 💡 Hint: consider creating a separate `<Day>` component to simplify the code inside the `<Forecast>` component.
 
-Find inspiration from [weather.cpinfo.cecilecody.life](https://weather.cpinfo19.cecilecody.life). _⚠️ Don't lose too much time adding CSS, we will take care of that in a later step!_
+Find inspiration from [weather.codyfactory.eu](https://weather.codyfactory.eu). _⚠️ Don't lose too much time adding CSS, we will take care of that in a later step!_
 
 ## 12 Add the search box
 
@@ -500,7 +500,7 @@ In HTML, we would create a simple search bar like so:
 
 #### Bonus 12.2: It is also possible to "automatically" search as the user types. Modify the `<SearchBar>` to eliminate the need for the user to click on the Search button.
 
-See [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life) for an example.
+See [weather.codyfactory.eu](https://weather.codyfactory.eu) for an example.
 
 💡 Hint: the package [`use-debounce`](https://github.com/xnimorz/use-debounce) provides an excellent implementation that delays (or "debounces") changes until the user _stops_ typing for 1000 ms. See the [Debounced Callbacks](https://github.com/xnimorz/use-debounce#debounced-callbacks) documentation.
 
@@ -564,9 +564,9 @@ Or we can use some **preconfigured styling**.
 
 #### Exercise 13.1: Modify the CSS classes to give the app some beautiful style.
 
-Refer to [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life) for inspiration.
+Refer to [weather.codyfactory.eu](https://weather.codyfactory.eu) for inspiration.
 
-- 💪 **BONUS: You can also use [Reactstrap](https://reactstrap.github.io/) and [React-icons](https://react-icons.netlify.com/#/) to use react components avoid adding classes manually. Plus some cool icons. _This is how [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life) works._**
+- 💪 **BONUS: You can also use [Reactstrap](https://reactstrap.github.io/) and [React-icons](https://react-icons.netlify.com/#/) to use react components avoid adding classes manually. Plus some cool icons. _This is how [weather.codyfactory.eu](https://weather.codyfactory.eu) works._**
 
 ## 14 Multiple pages
 
