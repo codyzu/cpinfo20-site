@@ -262,9 +262,9 @@ Next we will add the 2 components that will make up our app: `<SearchBar>` and `
    ```jsx
    const Forecast = props => (
      <div>
-       {props.daily.data.map(day => (
+       {props.weather.daily.map(day => (
          <p>
-           {day.temperatureHigh} {day.summary}
+           {day.temp.max} {day.weather[0].description}
          </p>
        ))}
      </div>
@@ -287,15 +287,16 @@ Next we will add the 2 components that will make up our app: `<SearchBar>` and `
 
    const App = () => {
      const testData = {
-       data: [
-         { temperatureHigh: 10, summary: "cloudy and cold" },
-         { temperatureHigh: 12, summary: "sunny and warm" }
+       daily: [
+         { temp: {max: 10}, weather: [{description:  "cloudy and cold"}] },
+         { temp: {max: 12}, weather: [{description: "sunny and warm"}] }
        ]
      };
+
      return (
        <div>
          <SearchBar />
-         <Forecast daily={testData} />
+         <Forecast weather={testData} />
        </div>
      );
    };
@@ -344,14 +345,14 @@ In our express server, we used [node-fetch](https://github.com/node-fetch/node-f
 
    ```jsx
    const App = () => {
-     const [daily, setDaily] = useState({ data: [] });
+     const [daily, setDaily] = useState({daily: []});
 
      // ...
      // return ...
    };
    ```
 
-   - Pass the default "empty" state to the `useState` function. This is modeled on what we expect our weather API to return: the **daily** weather object that contains an array, named `data`, that will contain the weather for each day.
+   - Pass the default "empty" state to the `useState` function. This is modeled on what we expect our weather API to return: an object with an array named `daily` that contains the weather for each day.
    - `useState` returns an array containing two objects. The current value `daily` (initially the state we passed) and a function `setDaily` that can set the state.
    - ⚠️ Don't forget to add `useState` (and `useEffect` for later) to your imports. Modify the line `import React from 'react';` to:
 
@@ -365,7 +366,7 @@ In our express server, we used [node-fetch](https://github.com/node-fetch/node-f
 
    ```javascript
    const App = () => {
-     const [daily, setDaily] = useState({ data: [] });
+     const [daily, setDaily] = useState({ daily: [] });
 
      async function searchCity(city) {
        const result = await fetch(`/api/weather/${city}`);
@@ -408,6 +409,12 @@ In our express server, we used [node-fetch](https://github.com/node-fetch/node-f
    ```
 
    ☝️ React will now call our "effect" that searches for "Annecy" when the `<App>` is rendered the first time!
+
+1. Finally, modify the line that renders the `Forecast` component to use the `daily` state data:
+
+   ```javascript
+   <Forecast weather={daily} />
+   ```
 
 1. Test your changes in Chrome, it should result the following:
 
