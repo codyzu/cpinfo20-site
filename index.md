@@ -61,12 +61,9 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ### 👩‍🔧 [React](m5/react-weather)
 
-<!--
-
+---
 ## Module 6: Cloud
 
 ### 📺 [Introduction to Cloud](m6/cloud-intro)
 
 ### 👩‍🔧 [Cloud Deployment](m6/cloud-deployment)
-
--->
