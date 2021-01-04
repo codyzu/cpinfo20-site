@@ -19,8 +19,11 @@ The weather API that we created will be deployed to a Serverless Function. We wi
 1. Sign in to your **university** google account
 1. "Create a project"
 1. Give your project a unique name and select the university parent organization:
+
    ![new project](images/firebase-create-project-1.png)
-1. Disable google analytics
+
+1. Disable google analytics:
+
    ![disable analytics](images/firebase-create-project-2.png)
 
 ## 1.2 Add Firebase into your project
