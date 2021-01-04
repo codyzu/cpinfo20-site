@@ -526,7 +526,7 @@ Or we can use some **preconfigured styling**.
 1. Add some more dependencies to our project.
 
    ```cmd
-   npm install --save add bootstrap jquery popper.js
+   npm install --save bootstrap jquery popper.js
    ```
 
    - Bootstrap requires [jquery](https://jquery.com/) and [popper.js](https://popper.js.org/), but they are not installed automatically. Therefor, we must install them explicitly.
