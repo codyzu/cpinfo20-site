@@ -51,7 +51,7 @@ function rgb(n) {
 // EXAMPLE - This can be deleted
 //
 async function example() {
-  const secret = decode('./a.png');
+  const secret = await decode('./a.png');
   console.log(secret);
 }
  
