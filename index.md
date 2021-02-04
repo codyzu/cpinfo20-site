@@ -72,3 +72,7 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ### 📝 [Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLSdADj8TzGUy0M0c_DtE5nvnNrwTUUEfFq5NJFOWMCm9CVaMbQ/viewform?usp=sf_link)
 
+---
+
+### 💥 [Hackathon](/hackathon)
+
