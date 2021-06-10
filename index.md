@@ -71,15 +71,15 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ---
 
-### 📝 [Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLSdADj8TzGUy0M0c_DtE5nvnNrwTUUEfFq5NJFOWMCm9CVaMbQ/viewform?usp=sf_link)
+## 📝 [Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLSdADj8TzGUy0M0c_DtE5nvnNrwTUUEfFq5NJFOWMCm9CVaMbQ/viewform?usp=sf_link)
 
 ---
 
-### 💥 [Hackathon](/hackathon)
+## 💥 [Hackathon](/hackathon)
 
 ---
 
-### ⚔️ Soutenance
+## ⚔️ Soutenance
 
 - Architecture diagram (client, server, database, cloud services, etc)
 - Problems, solutions, advantages, disadvantages of technologies (cloud services, NoSQL, react, etc)
