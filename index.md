@@ -62,6 +62,7 @@ Here you will find resources for the CPINFO-20 web dev course.
 ### 👩‍🔧 [React](m5/react-weather)
 
 ---
+
 ## Module 6: Cloud
 
 ### 📺 [Introduction to Cloud](m6/cloud-intro)
@@ -76,3 +77,13 @@ Here you will find resources for the CPINFO-20 web dev course.
 
 ### 💥 [Hackathon](/hackathon)
 
+---
+
+### ⚔️ Soutenance
+
+- Architecture diagram (client, server, database, cloud services, etc)
+- Problems, solutions, advantages, disadvantages of technologies (cloud services, NoSQL, react, etc)
+- How do you deploy your site? Where is the source code stored? Do you have automatic tests?
+- Problems encountered
+- Comparison of the technologies with PHP, Java, C# or others
+- What would you do differently if you could do the project again?
